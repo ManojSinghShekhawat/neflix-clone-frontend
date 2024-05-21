@@ -10,14 +10,22 @@ const URL =
 	"https://api.themoviedb.org/3/movie/upcoming?api_key=b7672e5e25179ee10601998856314018";
 export const Home = () => {
 	const [upcommingMovie, setUpcommingMovie] = useState([]);
+	const [popularMovie, setPopularMovie] = useState([]);
+	const [topRatedMovie, setTopRatedMovie] = useState([]);
+
+	const getdata = async (type, fun) => {
+		const {
+			data: { results },
+		} = await axios.get(
+			`https://api.themoviedb.org/3/movie/${type}?api_key=b7672e5e25179ee10601998856314018`
+		);
+		fun(results);
+	};
+
 	useEffect(() => {
-		const getdata = async () => {
-			const {
-				data: { results },
-			} = await axios.get(URL);
-			setUpcommingMovie(results);
-		};
-		getdata();
+		getdata("upcoming", setUpcommingMovie);
+		getdata("popular", setPopularMovie);
+		getdata("top_rated", setTopRatedMovie);
 	}, []);
 
 	return (
@@ -43,7 +51,9 @@ export const Home = () => {
 					</button>
 				</div>
 			</div>
-			<Row upcommingMovie={upcommingMovie} title={"Upcomming Movies"} />
+			<Row upcommingMovie={upcommingMovie} title={"Upcomming"} />
+			<Row upcommingMovie={popularMovie} title={"Popular"} />
+			<Row upcommingMovie={topRatedMovie} title={"Top rated"} />
 		</div>
 	);
 };

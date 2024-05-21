@@ -9,4 +9,8 @@
 	img {
 		margin: 5px;
 	}
+
+	::-webkit-scrollbar {
+		display: none;
+	}
 }
