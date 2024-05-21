@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import "../../logo.png";
+import { FaSearch } from "react-icons/fa";
 
 export const Header = () => {
 	return (
@@ -16,7 +17,9 @@ export const Header = () => {
 					<li>Your Feverate</li>
 				</ul>
 			</div>
-			<div className='search'>Icon</div>
+			<div className='search'>
+				<FaSearch />
+			</div>
 		</nav>
 	);
 };

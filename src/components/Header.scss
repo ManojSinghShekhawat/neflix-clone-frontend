@@ -12,7 +12,6 @@ nav {
 	width: 100%;
 	.menu {
 		margin-left: 2rem;
-		// background-color: red;
 		width: 60%;
 		ul {
 			display: flex;
@@ -31,6 +30,16 @@ nav {
 		img {
 			width: 100px;
 			height: 30px;
+		}
+	}
+	.search {
+		margin-right: 0.5rem;
+		> svg {
+			color: #fff;
+		}
+		&:hover {
+			cursor: pointer;
+			color: rgb(116, 118, 118);
 		}
 	}
 }

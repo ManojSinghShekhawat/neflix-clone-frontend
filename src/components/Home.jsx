@@ -5,6 +5,7 @@ import { FaPlus } from "react-icons/fa";
 import { Row } from "./Row";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Button } from "./Button";
 
 const URL =
 	"https://api.themoviedb.org/3/movie/upcoming?api_key=b7672e5e25179ee10601998856314018";
@@ -41,14 +42,8 @@ export const Home = () => {
 					consectetur distinctio!
 				</p>
 				<div className='btn'>
-					<button className='btn-play'>
-						<IoIosPlay />
-						Play
-					</button>
-					<button className='btn-list'>
-						<FaPlus />
-						My List
-					</button>
+					<Button title={"Play"} icon={IoIosPlay} className={"btn-play"} />
+					<Button title={"My List"} icon={FaPlus} className={"btn-list"} />
 				</div>
 			</div>
 			<Row upcommingMovie={upcommingMovie} title={"Upcomming"} />
