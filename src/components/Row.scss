@@ -1,0 +1,12 @@
+.row {
+	background-color: black;
+	> div {
+		display: flex;
+		width: 100%;
+		overflow-x: scroll;
+	}
+
+	img {
+		margin: 5px;
+	}
+}

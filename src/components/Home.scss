@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: rgba(175, 172, 172, 0.97);
+}
+
+.container {
+	height: 90vh;
+	width: 100%;
+	background-image: url("../../cover.jpg");
+	background-size: cover;
+}
+
+.side {
+	width: 450px;
+	padding: 5rem 2rem;
+	.lowerHeading {
+		padding-left: 3rem;
+	}
+	h3 {
+		color: white;
+	}
+	p {
+		color: rgba(246, 242, 233, 0.885);
+	}
+
+	.btn {
+		display: flex;
+	}
+
+	button {
+		margin: 1rem 0.5rem;
+		padding: 5px;
+		width: 5.5rem;
+		border-radius: 5px;
+		border: none;
+
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+			transition: 0.3s;
+		}
+	}
+	.btn-play {
+		background-color: white;
+		color: black;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		font-size: medium;
+
+		svg {
+			margin-right: 0.2rem;
+			fill: black;
+			font-size: large;
+		}
+	}
+	.btn-list {
+		background-color: grey;
+		color: white;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		font-size: medium;
+
+		svg {
+			margin-right: 0.2rem;
+			fill: white;
+			font-size: large;
+		}
+	}
+}

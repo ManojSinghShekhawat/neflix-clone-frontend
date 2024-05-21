@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+	color: #fff;
+	width: 100%;
+	.menu {
+		margin-left: 2rem;
+		// background-color: red;
+		width: 60%;
+		ul {
+			display: flex;
+			li {
+				list-style: none;
+				margin-left: 1rem;
+				&:hover {
+					cursor: pointer;
+					color: rgb(116, 118, 118);
+				}
+			}
+		}
+	}
+	.logo {
+		padding: 1rem;
+		img {
+			width: 100px;
+			height: 30px;
+		}
+	}
+}
